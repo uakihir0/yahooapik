@@ -9,6 +9,23 @@ and is available on GitHub Package.
 * [Text analysis APIs](https://developer.yahoo.co.jp/webapi/jlp/)
   * [Correction Support](https://developer.yahoo.co.jp/webapi/jlp/kousei/v1/kousei.html)
 
+## How To Use
+
+First, the developer needs to create a Yahoo application
+from [Yahoo Developer Center](https://e.developer.yahoo.co.jp/dashboard/). 
+The credentials in the application are then used to run various APIs.
+
+You can make a request with the following code.
+
+```kotlin
+Yahoo.withAppId(appId = ClientID)
+    .correctionSupport(
+        CorrectionSupportRequest(
+            sentence = "遙か彼方に小形飛行機が見える"
+        )
+    )
+```
+
 ## Author
 
 Twitter: [@uakihir0](https://twitter.com/uakihir0)

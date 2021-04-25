@@ -7,7 +7,7 @@ class CorrectionSupportRequest(
 
     @AppId
     @Param("appid")
-    val appId: String,
+    var appId: String? = null,
     @Param("sentence")
     val sentence: String,
     @Param("filter_group")
